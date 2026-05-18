@@ -1,374 +1,777 @@
-<!DOCTYPE HTML>
-<!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Mustafa's Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mustafa Khaled Elhelw | Flutter Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    :root {
+      --bg: #0a0e17;
+      --bg-surface: #0f1623;
+      --bg-card: #131c2e;
+      --bg-card-hover: #172035;
+      --accent: #00d4ff;
+      --accent-dim: rgba(0,212,255,0.12);
+      --accent-glow: rgba(0,212,255,0.25);
+      --accent2: #7c3aed;
+      --ink: #e8edf5;
+      --ink-muted: #7a8ba3;
+      --ink-faint: #3d4f66;
+      --border: rgba(255,255,255,0.06);
+      --border-accent: rgba(0,212,255,0.2);
+      --font-display: 'Outfit', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<span class="icon fa-gem"></span>
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Mustafa Elhelw</h1>
-								<p>Turning Data Into Insights That Drive Success</p>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#About">About</a></li>
-								<li><a href="#Services">Services</a></li>
-								<li><a href="#projects">projects</a></li>
-								<li><a href="#contact">Contact</a></li>
-								<!--<li><a href="#elements">Elements</a></li>-->
-							</ul>
-						</nav>
-					</header>
+    html { scroll-behavior: smooth; }
 
-				<!-- Main -->
-					<div id="main">
+    body {
+      font-family: var(--font-display);
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-						<!-- About -->
-							<article id="About">
-								<h2 class="major">About</h2>
-								<span class="image main"><img src="images/WhatsApp Image 2025-02-07 at 06.39.27_129f59f9.jpg" alt="" /></span>
-								<p>Hi, I'm Mustafa, a passionate data analyst skilled in exploring trends, solving problems, and making data-driven decisions.
-									I’m here to help businesses thrive in today’s data-centric world.
-									What sets me apart is my ability to combine analytical thinking with creativity</p>
-									<p>**Bachelor of Computing and Bioinformatics (2023 - 2027)**</p>
-									
-							</article>
+    /* ── GRID TEXTURE ── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
 
-						<!-- Services -->
-							<article id="Services">
-								<h2 class="major">Services</h2>
-								<span class="image main"><img src="images/2095410_943c_2-removebg-preview.png" alt="" /></span>
-								<p> Cleaned and transformed raw data using <strong>Python (Pandas, NumPy)</strong>,  
-									ensuring datasets were optimized for further analysis and reducing data 
-									inconsistencies. 
-									Wrote and optimized complex <strong>SQL</strong> queries to extract, manipulate, and 
-									analyze large datasets, improving decision-making efficiency for clients. 
-									Designed and developed interactive dashboards and visualizations using<strong> Power BI and Tableau</strong> 
-									to provide actionable insights for clients across industries.</p>
-							</article>
+    /* ── SCROLL PROGRESS ── */
+    .scroll-progress {
+      position: fixed; right: 0; top: 0;
+      height: 100vh; width: 3px;
+      background: var(--border); z-index: 50;
+    }
+    .scroll-progress-bar {
+      width: 100%;
+      background: linear-gradient(to bottom, var(--accent), var(--accent2));
+      height: 0; transition: height 0.2s ease;
+    }
 
-						<!-- projects -->
-							<article id="projects">
-								<h2 class="major">projects</h2>
-								<span class="image main"><img src="images/images__2_-removebg-preview.png" alt="" /></span>								<h2><a href="https://github.com/mustafaelhelww/cleaning-data-and-solving-some-queries">Cleaning data and some queries</a></h2>
-								<p>here I Cleaned and queried the employees and customers datasets it was a crucial step in improving the company's decision-making and operational efficiency.</p>
-								<span class="image main"><img src="images/images__1_-removebg-preview.png" alt="" /></span>								<h2><a href="https://github.com/mustafaelhelww/cleaning-data-by-SQL">SQL Project</a></h2>
-								<p>in this project I cleaned some data for emplyees in a company's database with SQL</p>
-								<span class="image main"><img src="images/bdb6abe62ffe8ac78bff9ae3fb552b5e-removebg-preview.png" alt="" /></span>								<h2><a href="https://github.com/mustafaelhelww/Analysis-Data-and-making-DashBoards-using-excel">Excel Project</a></h2>
-								<p>In this project I made a data analysis for Sustainable Energy Monitoring Dashboard using Microsoft Excel</p>
-							</article>
+    /* ── NAV ── */
+    header {
+      position: fixed; top: 0; left: 0; right: 0;
+      background: rgba(10,14,23,0.85);
+      backdrop-filter: blur(16px);
+      z-index: 40;
+      border-bottom: 1px solid var(--border);
+    }
+    nav {
+      max-width: 1100px; margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .logo {
+      font-family: var(--font-mono);
+      font-size: 0.95rem; font-weight: 700;
+      color: var(--ink);
+      display: flex; align-items: center; gap: 0.4rem;
+    }
+    .logo-bracket { color: var(--accent); }
+    .nav-menu { display: none; gap: 2rem; }
+    @media (min-width: 768px) { .nav-menu { display: flex; } }
+    .nav-menu button {
+      background: none; border: none;
+      font-family: var(--font-mono); font-size: 0.78rem;
+      font-weight: 400; letter-spacing: 0.03em;
+      cursor: pointer; color: var(--ink-muted);
+      transition: color 0.2s;
+      padding: 0.3rem 0;
+      position: relative;
+    }
+    .nav-menu button::before {
+      content: './'; color: var(--accent);
+      opacity: 0; transition: opacity 0.2s;
+      margin-right: 2px;
+    }
+    .nav-menu button:hover { color: var(--ink); }
+    .nav-menu button:hover::before { opacity: 1; }
+    .nav-menu button.active { color: var(--accent); }
+    .nav-menu button.active::before { opacity: 1; }
 
-						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>
-								<ul class="icons">
-									<li><a href="https://x.com/mustafaelhelww" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="https://www.facebook.com/mustafaelhelww" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="https://www.instagram.com/mustafaelhelww/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="https://github.com/mustafaelhelww" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="https://www.linkedin.com/in/mustafa-elhelw-7139102a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
-								</ul>
-							</article>
+    /* ── SHARED ── */
+    main { padding-top: 4rem; position: relative; z-index: 1; }
+    section { padding: 6rem 2rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      font-family: var(--font-mono); font-size: 0.72rem; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 0.75rem;
+      display: flex; align-items: center; gap: 0.6rem;
+    }
+    .section-label::before { content: '//'; opacity: 0.5; }
+    h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800; letter-spacing: -0.03em;
+      color: var(--ink); margin-bottom: 3.5rem; line-height: 1.1;
+    }
 
-						<!-- Elements -->
-							<article id="elements">
-								<h2 class="major">Elements</h2>
+    /* ── HOME ── */
+    #home {
+      min-height: 100vh; display: flex; align-items: center;
+      position: relative; overflow: hidden;
+    }
+    .home-orb {
+      position: absolute; top: -20%; right: -10%;
+      width: 600px; height: 600px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,212,255,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .home-orb2 {
+      position: absolute; bottom: -10%; left: -5%;
+      width: 400px; height: 400px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(124,58,237,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-status {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      background: var(--accent-dim);
+      border: 1px solid var(--border-accent);
+      border-radius: 0.3rem;
+      padding: 0.35rem 0.9rem;
+      font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent);
+      margin-bottom: 2rem;
+    }
+    .hero-status-dot {
+      width: 6px; height: 6px; border-radius: 50%; background: var(--accent);
+      animation: blink 1.4s steps(1) infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 800; letter-spacing: -0.04em;
+      line-height: 0.95; color: var(--ink); margin-bottom: 0.5rem;
+    }
+    .h1-name { color: var(--ink); display: block; }
+    .h1-role {
+      color: transparent;
+      background: linear-gradient(90deg, var(--accent), #4fc3f7);
+      -webkit-background-clip: text; background-clip: text;
+      display: block;
+    }
+    .hero-sub {
+      font-size: 1rem; color: var(--ink-muted); max-width: 480px;
+      margin: 1.5rem 0 2.5rem; line-height: 1.75;
+    }
+    .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--accent); color: var(--bg);
+      border: none; padding: 0.75rem 1.75rem;
+      font-family: var(--font-mono); font-size: 0.82rem; font-weight: 700;
+      border-radius: 0.3rem; cursor: pointer;
+      transition: opacity 0.2s, transform 0.15s;
+      letter-spacing: 0.02em;
+    }
+    .btn-primary:hover { opacity: 0.85; transform: translateY(-2px); }
+    .btn-secondary {
+      background: transparent; color: var(--ink);
+      border: 1px solid var(--ink-faint); padding: 0.75rem 1.75rem;
+      font-family: var(--font-mono); font-size: 0.82rem; font-weight: 500;
+      border-radius: 0.3rem; cursor: pointer;
+      transition: border-color 0.2s, color 0.2s, transform 0.15s;
+    }
+    .btn-secondary:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+    .hero-stats {
+      display: flex; gap: 2.5rem; flex-wrap: wrap;
+      margin-top: 3rem; padding-top: 2.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .hero-stat-num {
+      font-family: var(--font-mono); font-size: 1.8rem; font-weight: 700;
+      color: var(--accent); line-height: 1;
+    }
+    .hero-stat-label { font-size: 0.75rem; color: var(--ink-muted); margin-top: 0.3rem; }
 
-								<section>
-									<h3 class="major">Text</h3>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h4>Blockquote</h4>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h4>Preformatted</h4>
-									<pre><code>i = 0;
+    /* ── ABOUT ── */
+    #about { background: var(--bg-surface); }
+    .about-grid {
+      display: grid; grid-template-columns: 1fr;
+      gap: 3rem; align-items: start;
+    }
+    @media (min-width: 768px) { .about-grid { grid-template-columns: 3fr 2fr; } }
+    .about-text p {
+      font-size: 1rem; color: var(--ink-muted);
+      margin-bottom: 1.2rem; line-height: 1.85;
+    }
+    .about-text p strong { color: var(--ink); font-weight: 600; }
+    .about-sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+    .info-block {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 2px solid var(--accent);
+      border-radius: 0 0.5rem 0.5rem 0;
+      padding: 1rem 1.2rem;
+    }
+    .info-block-label {
+      font-family: var(--font-mono); font-size: 0.65rem; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 0.5rem;
+    }
+    .info-block-title { font-size: 0.92rem; font-weight: 600; color: var(--ink); }
+    .info-block-sub { font-size: 0.82rem; color: var(--ink-muted); margin-top: 0.1rem; }
+    .skill-pills { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.6rem; }
+    .pill {
+      padding: 0.2rem 0.65rem;
+      background: var(--accent-dim);
+      border: 1px solid var(--border-accent);
+      border-radius: 0.2rem;
+      font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent);
+    }
 
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
+    /* ── SKILLS ── */
+    #skills { background: var(--bg); }
+    .skills-grid {
+      display: grid; gap: 1.5rem;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+    .skill-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 0.6rem; padding: 1.75rem;
+      transition: border-color 0.2s, transform 0.2s, background 0.2s;
+      position: relative; overflow: hidden;
+    }
+    .skill-card::before {
+      content: ''; position: absolute; top: 0; left: 0;
+      width: 100%; height: 2px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      opacity: 0; transition: opacity 0.2s;
+    }
+    .skill-card:hover { border-color: var(--border-accent); transform: translateY(-3px); background: var(--bg-card-hover); }
+    .skill-card:hover::before { opacity: 1; }
+    .skill-card h3 {
+      font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700;
+      color: var(--accent); margin-bottom: 1.2rem; letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .skill-list { list-style: none; }
+    .skill-list li {
+      font-size: 0.88rem; color: var(--ink-muted);
+      padding: 0.35rem 0;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .skill-list li:last-child { border-bottom: none; }
+    .skill-list li::before { content: '>'; color: var(--accent); font-family: var(--font-mono); font-size: 0.7rem; flex-shrink: 0; }
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
+    /* ── PROJECTS ── */
+    #projects { background: var(--bg-surface); }
+    .projects-list { display: flex; flex-direction: column; gap: 1.5rem; }
+    .project-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 0.6rem; padding: 2rem;
+      transition: border-color 0.2s, background 0.2s;
+      display: grid; grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    @media (min-width: 768px) { .project-card { grid-template-columns: 1fr auto; align-items: start; } }
+    .project-card:hover { border-color: var(--border-accent); background: var(--bg-card-hover); }
+    .project-card h3 {
+      font-family: var(--font-display); font-size: 1.2rem; font-weight: 700;
+      color: var(--ink); margin-bottom: 0.6rem; letter-spacing: -0.02em;
+    }
+    .project-card p { font-size: 0.9rem; color: var(--ink-muted); line-height: 1.75; margin-bottom: 1.2rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .tag {
+      background: rgba(124,58,237,0.12);
+      color: #a78bfa;
+      border: 1px solid rgba(124,58,237,0.2);
+      padding: 0.18rem 0.65rem; border-radius: 0.2rem;
+      font-family: var(--font-mono); font-size: 0.72rem;
+    }
+    .project-number {
+      font-family: var(--font-mono); font-size: 3rem; font-weight: 700;
+      color: var(--ink-faint); line-height: 1; white-space: nowrap; align-self: start;
+    }
 
-								<section>
-									<h3 class="major">Lists</h3>
+    /* ── EXPERIENCE ── */
+    #experience { background: var(--bg); }
+    .exp-list { display: flex; flex-direction: column; gap: 0; }
+    .exp-item {
+      display: grid; grid-template-columns: auto 1fr;
+      gap: 2rem; padding: 2rem 0;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.2s;
+    }
+    .exp-item:first-child { border-top: 1px solid var(--border); }
+    .exp-meta { width: 110px; padding-top: 0.15rem; }
+    .exp-date {
+      font-family: var(--font-mono); font-size: 0.72rem; color: var(--ink-faint);
+      white-space: nowrap; margin-bottom: 0.3rem;
+    }
+    .exp-hours {
+      font-family: var(--font-mono); font-size: 0.68rem;
+      color: var(--accent); opacity: 0.7;
+    }
+    .exp-body h3 {
+      font-family: var(--font-display); font-size: 1.1rem; font-weight: 700;
+      color: var(--ink); margin-bottom: 0.15rem;
+    }
+    .exp-org { font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent); margin-bottom: 0.75rem; }
+    .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+    .exp-bullets li {
+      font-size: 0.88rem; color: var(--ink-muted); line-height: 1.6;
+      display: flex; gap: 0.6rem;
+    }
+    .exp-bullets li::before { content: '—'; color: var(--ink-faint); flex-shrink: 0; margin-top: 0.05rem; }
 
-									<h4>Unordered</h4>
-									<ul>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+    /* ── CONTACT ── */
+    #contact { background: var(--bg-surface); }
+    .contact-intro { font-size: 1rem; color: var(--ink-muted); margin-bottom: 3rem; max-width: 480px; line-height: 1.75; }
+    .contact-grid {
+      display: grid; gap: 1rem;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      margin-bottom: 3rem;
+    }
+    .contact-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 0.6rem; padding: 1.25rem 1.5rem;
+      text-decoration: none; color: inherit;
+      transition: border-color 0.2s, background 0.2s;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .contact-card:hover { border-color: var(--border-accent); background: var(--bg-card-hover); }
+    .contact-card-icon {
+      width: 2.2rem; height: 2.2rem; border-radius: 0.4rem;
+      background: var(--accent-dim); display: flex;
+      align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .contact-card-icon svg { width: 1rem; height: 1rem; stroke: var(--accent); fill: none; stroke-width: 2; }
+    .contact-card-label {
+      font-family: var(--font-mono); font-size: 0.65rem;
+      text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-faint); margin-bottom: 0.2rem;
+    }
+    .contact-card-value { font-size: 0.85rem; color: var(--ink); word-break: break-all; }
+    .contact-footer {
+      font-family: var(--font-mono); font-size: 0.75rem;
+      color: var(--ink-faint); padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
 
-									<h4>Alternate</h4>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+    footer {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 2rem; text-align: center;
+      font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-faint);
+    }
 
-									<h4>Ordered</h4>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
-									<h4>Icons</h4>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-									</ul>
+    /* ── FADE ANIMATIONS ── */
+    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .fade-up.visible { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
 
-									<h4>Actions</h4>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</section>
+<div class="scroll-progress"><div class="scroll-progress-bar"></div></div>
 
-								<section>
-									<h3 class="major">Table</h3>
-									<h4>Default</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
+<header>
+  <nav>
+    <div class="logo">
+      <span class="logo-bracket">{</span>
+      Mustafa.Elhelw
+      <span class="logo-bracket">}</span>
+    </div>
+    <div class="nav-menu">
+      <button class="nav-btn active" data-section="home">home</button>
+      <button class="nav-btn" data-section="about">about</button>
+      <button class="nav-btn" data-section="skills">skills</button>
+      <button class="nav-btn" data-section="projects">projects</button>
+      <button class="nav-btn" data-section="experience">experience</button>
+      <button class="nav-btn" data-section="contact">contact</button>
+    </div>
+  </nav>
+</header>
 
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
+<main>
 
-								<section>
-									<h3 class="major">Buttons</h3>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Primary</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button primary disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
+  <!-- HOME -->
+  <section id="home">
+    <div class="home-orb"></div>
+    <div class="home-orb2"></div>
+    <div class="container">
+      <div class="hero-status">
+        <div class="hero-status-dot"></div>
+        available_for_work.dart
+      </div>
+      <h1>
+        <span class="h1-name">Mustafa Khaled</span>
+        <span class="h1-role">Flutter Dev.</span>
+      </h1>
+      <p class="hero-sub">I build cross-platform mobile apps with Flutter & Dart — from clean UI to Firebase backends, REST APIs, and production-ready architecture.</p>
+      <div class="btn-group">
+        <button class="btn-primary scroll-btn" data-section="projects">View Projects</button>
+        <button class="btn-secondary scroll-btn" data-section="contact">Hire Me</button>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-num">6</div>
+          <div class="hero-stat-label">Apps Built</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">200+</div>
+          <div class="hero-stat-label">Dev Hours</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">3</div>
+          <div class="hero-stat-label">Real-World Gigs</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">A</div>
+          <div class="hero-stat-label">CS GPA</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-								<section>
-									<h3 class="major">Form</h3>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="demo-name">Name</label>
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-											</div>
-											<div class="field half">
-												<label for="demo-email">Email</label>
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-											</div>
-											<div class="field">
-												<label for="demo-category">Category</label>
-												<select name="demo-category" id="demo-category">
-													<option value="">-</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-												<label for="demo-priority-low">Low</label>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-high" name="demo-priority">
-												<label for="demo-priority-high">High</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-copy" name="demo-copy">
-												<label for="demo-copy">Email me a copy</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-human" name="demo-human" checked>
-												<label for="demo-human">Not a robot</label>
-											</div>
-											<div class="field">
-												<label for="demo-message">Message</label>
-												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</section>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <p class="section-label fade-up">About</p>
+      <h2 class="fade-up">Code-first.<br>Clean by design.</h2>
+      <div class="about-grid">
+        <div class="about-text fade-up">
+          <p>I'm a <strong>Flutter Developer</strong> based in Cairo, Egypt — currently pursuing a B.Sc. in Computer Science at Benha Faculty of Computers and Artificial Intelligence (GPA: Excellent).</p>
+          <p>My journey into mobile development started with a rigorous Flutter diploma at Route Academy, where I went deep on Dart, clean architecture, state management, and Firebase. That foundation was put to the test at <strong>DiDi</strong>, where I interned and worked on real production tasks — feature implementation, bug fixing, code reviews, and performance optimisation in a large, professional codebase.</p>
+          <p>Beyond the internship, I've independently designed and shipped <strong>6 mobile apps</strong>, including 2 fully polished products. I care about code quality — clean structure, scalable architecture, and interfaces that just feel right on a phone.</p>
+          <p>Whether it's a greenfield app or an existing codebase that needs love, I bring the same mindset: <strong>build it right, build it to last.</strong></p>
+        </div>
+        <div class="about-sidebar fade-up">
+          <div class="info-block">
+            <div class="info-block-label">Education</div>
+            <div class="info-block-title">B.Sc. Computer Science</div>
+            <div class="info-block-sub">Benha Faculty of Computers & AI</div>
+            <div class="info-block-sub">Expected July 2026 · GPA: A (Excellent)</div>
+          </div>
+          <div class="info-block">
+            <div class="info-block-label">Location</div>
+            <div class="info-block-title">Cairo, Egypt</div>
+            <div class="info-block-sub">+20 111 320 5500</div>
+          </div>
+          <div class="info-block">
+            <div class="info-block-label">Core Stack</div>
+            <div class="skill-pills">
+              <span class="pill">Flutter</span>
+              <span class="pill">Dart</span>
+              <span class="pill">Firebase</span>
+              <span class="pill">REST APIs</span>
+              <span class="pill">Provider</span>
+              <span class="pill">Bloc</span>
+            </div>
+          </div>
+          <div class="info-block">
+            <div class="info-block-label">Soft Skills</div>
+            <div class="skill-pills">
+              <span class="pill">Teamwork</span>
+              <span class="pill">Fast Learner</span>
+              <span class="pill">Time Mgmt</span>
+              <span class="pill">Communication</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-							</article>
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <p class="section-label fade-up">Skills</p>
+      <h2 class="fade-up">Technical Toolkit</h2>
+      <div class="skills-grid">
+        <div class="skill-card fade-up">
+          <h3>Languages</h3>
+          <ul class="skill-list">
+            <li>Flutter</li>
+            <li>Dart</li>
+          </ul>
+        </div>
+        <div class="skill-card fade-up">
+          <h3>Backend / Database</h3>
+          <ul class="skill-list">
+            <li>Firebase Authentication</li>
+            <li>Cloud Firestore</li>
+            <li>Firebase Storage</li>
+          </ul>
+        </div>
+        <div class="skill-card fade-up">
+          <h3>Integration</h3>
+          <ul class="skill-list">
+            <li>REST APIs</li>
+            <li>JSON Parsing</li>
+            <li>HTTP Client</li>
+          </ul>
+        </div>
+        <div class="skill-card fade-up">
+          <h3>State Management</h3>
+          <ul class="skill-list">
+            <li>Provider</li>
+            <li>Bloc (Fundamentals)</li>
+          </ul>
+        </div>
+        <div class="skill-card fade-up">
+          <h3>Dev Tools</h3>
+          <ul class="skill-list">
+            <li>Git & GitHub</li>
+            <li>VS Code</li>
+            <li>Android Studio</li>
+          </ul>
+        </div>
+        <div class="skill-card fade-up">
+          <h3>Principles & Design</h3>
+          <ul class="skill-list">
+            <li>Clean Code & OOP</li>
+            <li>SOLID Basics</li>
+            <li>Material Design</li>
+            <li>Responsive Layouts</li>
+            <li>UI/UX Fundamentals</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-					</div>
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <p class="section-label fade-up">Projects</p>
+      <h2 class="fade-up">Things I've Built</h2>
+      <div class="projects-list">
 
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
+        <div class="project-card fade-up">
+          <div>
+            <h3>News App — Live API Integration</h3>
+            <p>A fully functional news application that fetches and displays live articles via a real-world REST API. Features category filtering, clean article detail views, and smooth navigation — built with proper state management and clean architecture patterns learned at Route Academy.</p>
+            <div class="tags">
+              <span class="tag">Flutter</span>
+              <span class="tag">Dart</span>
+              <span class="tag">REST API</span>
+              <span class="tag">Provider</span>
+              <span class="tag">JSON Parsing</span>
+            </div>
+          </div>
+          <div class="project-number">01</div>
+        </div>
 
-			</div>
+        <div class="project-card fade-up">
+          <div>
+            <h3>E-Commerce App</h3>
+            <p>A cross-platform e-commerce mobile app featuring product browsing, cart management, and Firebase Authentication for user accounts. Focused on clean UI/UX following Material Design guidelines, with scalable widget architecture and a consistent design language throughout.</p>
+            <div class="tags">
+              <span class="tag">Flutter</span>
+              <span class="tag">Firebase Auth</span>
+              <span class="tag">Material Design</span>
+              <span class="tag">State Management</span>
+            </div>
+          </div>
+          <div class="project-number">02</div>
+        </div>
 
-		<!-- BG -->
-			<div id="bg"></div>
+        <div class="project-card fade-up">
+          <div>
+            <h3>GDG Benha Team App</h3>
+            <p>A complete mobile application built collaboratively at the GDG Benha Bootcamp. I owned user authentication, API integration, and key UI screens. Delivered from concept to production in a real team environment using Git for version control, branch management, and collaborative code reviews.</p>
+            <div class="tags">
+              <span class="tag">Flutter</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">REST API</span>
+              <span class="tag">Git / GitHub</span>
+              <span class="tag">Team Project</span>
+            </div>
+          </div>
+          <div class="project-number">03</div>
+        </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        <div class="project-card fade-up">
+          <div>
+            <h3>To-Do App</h3>
+            <p>A clean, fast task management app with full CRUD operations, local state persistence, and a minimal UI. Built to master core Flutter widget patterns, lifecycle management, and clean state architecture before scaling up to more complex projects.</p>
+            <div class="tags">
+              <span class="tag">Flutter</span>
+              <span class="tag">Dart</span>
+              <span class="tag">Clean Architecture</span>
+              <span class="tag">CRUD</span>
+            </div>
+          </div>
+          <div class="project-number">04</div>
+        </div>
 
-	</body>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <p class="section-label fade-up">Experience</p>
+      <h2 class="fade-up">Where I've Shipped</h2>
+      <div class="exp-list">
+
+        <div class="exp-item fade-up">
+          <div class="exp-meta">
+            <div class="exp-date">2023 – 2024</div>
+            <div class="exp-hours">~160–200 hrs</div>
+          </div>
+          <div class="exp-body">
+            <h3>Flutter Intern</h3>
+            <div class="exp-org">DiDi — Industry Internship</div>
+            <ul class="exp-bullets">
+              <li>Worked on 4–6 real-world tasks spanning feature implementation, bug fixing, and performance optimisation.</li>
+              <li>Participated in code reviews and technical team discussions, strengthening code-quality awareness.</li>
+              <li>Navigated a large professional codebase and adapted to an agile-like team workflow.</li>
+              <li>Delivered tasks consistently against deadlines in a structured, production environment.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-item fade-up">
+          <div class="exp-meta">
+            <div class="exp-date">2023</div>
+            <div class="exp-hours">~120–150 hrs</div>
+          </div>
+          <div class="exp-body">
+            <h3>Flutter Trainee</h3>
+            <div class="exp-org">Route Academy — Flutter Diploma</div>
+            <ul class="exp-bullets">
+              <li>Completed an intensive Flutter & Dart diploma covering clean code, architecture, and state management.</li>
+              <li>Developed 3 full apps: a To-Do app, a News app with live API integration, and a basic E-commerce app.</li>
+              <li>Built 5–7 mini-projects focused on UI components, widget composition, and feature implementation.</li>
+              <li>Integrated REST APIs and Firebase services across multiple projects.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-item fade-up">
+          <div class="exp-meta">
+            <div class="exp-date">2023</div>
+            <div class="exp-hours">~60–80 hrs</div>
+          </div>
+          <div class="exp-body">
+            <h3>Flutter Developer — Team Project</h3>
+            <div class="exp-org">GDG Benha Bootcamp</div>
+            <ul class="exp-bullets">
+              <li>Collaborated in a team to build a complete mobile application from concept to delivery.</li>
+              <li>Owned 2–3 core modules: user authentication, API integration, and key UI screens.</li>
+              <li>Used Git & GitHub for version control, branch management, and collaborative code reviews.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-item fade-up">
+          <div class="exp-meta">
+            <div class="exp-date">2022 – Present</div>
+            <div class="exp-hours">200+ hrs</div>
+          </div>
+          <div class="exp-body">
+            <h3>Flutter Developer — Personal Projects</h3>
+            <div class="exp-org">Self-Directed Development</div>
+            <ul class="exp-bullets">
+              <li>Independently designed and developed 4–6 mobile apps, including 2 fully polished complete products.</li>
+              <li>Applied Firebase Authentication, Firestore, real-time APIs, and state management (Provider).</li>
+              <li>Focused on UI/UX quality with clean, user-friendly interfaces following Material Design guidelines.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <p class="section-label fade-up">Contact</p>
+      <h2 class="fade-up">Let's Build<br>Something.</h2>
+      <p class="contact-intro fade-up">Have a mobile app idea? Need a Flutter developer who cares about clean code and clean UI? Let's talk.</p>
+      <div class="contact-grid fade-up">
+        <a href="tel:+201113205500" class="contact-card">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l1.27-.89a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="contact-card-label">Phone</div>
+            <div class="contact-card-value">+20 111 320 5500</div>
+          </div>
+        </a>
+        <a href="https://github.com" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </div>
+          <div>
+            <div class="contact-card-label">GitHub</div>
+            <div class="contact-card-value">GitHub Profile</div>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/mustafa-elhelw-7139102a8/" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </div>
+          <div>
+            <div class="contact-card-label">LinkedIn</div>
+            <div class="contact-card-value">LinkedIn Profile</div>
+          </div>
+        </a>
+      </div>
+      <div class="contact-footer">// Cairo, Egypt · Flutter Developer · Open to remote & on-site</div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>// © 2026 Mustafa Khaled Elhelw · Built with Flutter in mind.</p>
+</footer>
+
+<script>
+  const progressBar = document.querySelector('.scroll-progress-bar');
+  const navBtns = document.querySelectorAll('.nav-btn');
+  const scrollBtns = document.querySelectorAll('.scroll-btn');
+  const sectionIds = ['home','about','skills','projects','experience','contact'];
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docH = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.height = (docH > 0 ? scrollTop / docH * 100 : 0) + '%';
+
+    const pos = scrollTop + 120;
+    for (const id of sectionIds) {
+      const el = document.getElementById(id);
+      if (el && pos >= el.offsetTop && pos < el.offsetTop + el.offsetHeight) {
+        navBtns.forEach(b => b.classList.remove('active'));
+        const btn = document.querySelector(`.nav-btn[data-section="${id}"]`);
+        if (btn) btn.classList.add('active');
+        break;
+      }
+    }
+  });
+
+  const scrollTo = id => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  navBtns.forEach(b => b.addEventListener('click', () => scrollTo(b.dataset.section)));
+  scrollBtns.forEach(b => b.addEventListener('click', () => scrollTo(b.dataset.section)));
+
+  const observer = new IntersectionObserver(
+    entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+    { threshold: 0.1 }
+  );
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
 </html>
